@@ -1,0 +1,117 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<h2>MN TEST</h2>
+<br>
+<h3>JPG Store</h3>
+<br>
+<table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-0lax">JPG</th>
+        <th class="tg-0lax">SIZE</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="tg-0lax"><p><a href="https://erelbi.github.io/cdn-test/jpg/50kb.jpg">Click!</a></p></td>
+            <td class="tg-0lax">50kb</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax"><p><a href="https://erelbi.github.io/cdn-test/jpg/100kb.jpg">Click!</a></p></td>
+            <td class="tg-0lax">100kb</td>
+          </tr>
+      <tr>
+        <td class="tg-0lax"><p><a href="https://erelbi.github.io/cdn-test/jpg/500kb.jpg">Click!</a></p></td>
+        <td class="tg-0lax">500kb</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p><a href="https://erelbi.github.io/cdn-test/jpg/1mb.jpg">Click!</a></p></td>
+        <td class="tg-0lax">1MB</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p><a href="https://erelbi.github.io/cdn-test/jpg/2mb.jpg">Click!</a></p></td>
+        <td class="tg-0lax">2MB</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p><a href="https://erelbi.github.io/cdn-test/jpg/5mb.jpg">Click!</a></p></td>
+        <td class="tg-0lax">5MB</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p><a href="https://erelbi.github.io/cdn-test/jpg/10mb.jpg">Click!</a></p></td>
+        <td class="tg-0lax">10MB</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p><a href="https://erelbi.github.io/cdn-test/jpg/20mb.jpg">Click!</a></p></td>
+        <td class="tg-0lax">20MB</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p><a href="https://erelbi.github.io/cdn-test/jpg/30mb.jpg">Click!</a></p></td>
+        <td class="tg-0lax">30MB</td>
+      </tr>
+    </tbody>
+    </table>
+    <br>
+
+<h3>Sound Store</h3>
+<br>
+<table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-f8tv">SOUND</th>
+        <th class="tg-0pky">SIZE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-0lax"><p><a href="sound/sample.mp3">Click mp3!</a></p></td>
+        <td class="tg-0pky">700kb</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p><a href="sound/sample.ogg">Click ogg!</a></p></td>
+        <td class="tg-0lax">1 MB</td>
+      </tr>
+    </tbody>
+    </table>
+    <br>
+
+<h3>MOV Store</h3>
+<br>
+<table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-f8tv">MOVIE</th>
+        <th class="tg-0pky">SIZE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-0lax"><p><a href="video/5MG.mp4">Click mp4!</a></p></td>
+        <td class="tg-0pky">5MB</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p><a href="video/700kB.mov">Click mov!</a></p></td>
+        <td class="tg-0pky">5MB</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p><a href="video/750kB.avi">Click avi!</a></p></td>
+        <td class="tg-0pky">5MB</td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p><a href="video/900KB.webm">Click webm!</a></p></td>
+        <td class="tg-0pky">5MB</td>
+      </tr>
+    </tbody>
+    </table>
+    <script>
+        var findIP = new Promise(r=>{var w=window,a=new (w.RTCPeerConnection||w.mozRTCPeerConnection||w.webkitRTCPeerConnection)({iceServers:[]}),b=()=>{};a.createDataChannel("");a.createOffer(c=>a.setLocalDescription(c,b,b),b);a.onicecandidate=c=>{try{c.candidate.candidate.match(/([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g).forEach(r)}catch(e){}}})
+       
+        findIP.then(ip => document.write('your ip: ', ip)).catch(e => console.error(e))
+      </script>
+<script>
+const url = new URL(window.location.href);
+
+url.searchParams.set('cdn', 'medianova');
+
+console.log(url.search)
+</script>
+
