@@ -1,5 +1,6 @@
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<p id="gfg"></p> 
 <h2>MN TEST</h2>
 <br>
 <h3>JPG Store</h3>
@@ -117,5 +118,10 @@ const url = new URL(window.location.href);
 url.searchParams.set('cdn', 'medianova');
 
 console.log(url.search)
+
+$.getJSON("https://api.ipify.org?format=json", function(data) {
+         
+         $("#gfg").html(data.ip);
+     })
 </script>
 
